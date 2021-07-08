@@ -8,15 +8,12 @@ import './styles/searchBarStyles.css';
 import SocialMediaApp from './components/SocialMediaAppComponent';
 import SearchList from './components/SearchListComponent';
 import './firebase/firebase';
-import {startLogin} from './actions/authAction'
-import LoginIn from './components/LoginPageComponent';
-import { useEffect } from 'react';
 
 function App() {
   return (
     <div>
-      {/* <SocialMediaApp /> */}
-      <SearchList/>
+      <SocialMediaApp />
+      {/* <SearchList/> */}
     </div>
   );
 }
