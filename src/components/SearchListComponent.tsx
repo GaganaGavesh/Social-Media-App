@@ -9,17 +9,17 @@ const SearchList = () => {
     const [collabs, setCollabs] = useState([]);
     const [mappedCollabs, setMappedCollabs] = useState([]);
     const [currentUserFollowIds, SetCurrentUserFollowIds] = useState([]);
+    const correntUserId: string =  'AJv5bZn6aEeIL3SDutVeoBVrR8F3';
 
-
-    let isLoggedIn = false;
-    if (Object.keys(state.user).length == 0) {
-        isLoggedIn = false;
-    } else {
-        isLoggedIn = true;
-    }
+    // let isLoggedIn = false;
+    // if (Object.keys(state.user).length == 0) {
+    //     isLoggedIn = false;
+    // } else {
+    //     isLoggedIn = true;
+    // }
 
     useEffect(() => {
-        refChildUsers.orderByChild("userId").limitToFirst(1).equalTo(state.user.uid).once("value").then((snapshot: any) => {
+        refChildUsers.orderByChild("userId").limitToFirst(1).equalTo(correntUserId).once("value").then((snapshot: any) => {
             if (snapshot.exists()) {
                 const fetchUser: any = [];
 
@@ -39,7 +39,7 @@ const SearchList = () => {
                             isFollows = true;
                         }
                         //state.user.uid
-                        if (state.user.uid === user.userId) {
+                        if (correntUserId === user.userId) {
                             isCurrentUser = true;
                         }
                     });
@@ -56,8 +56,8 @@ const SearchList = () => {
     }, [collabs]);
     return (
         <div>
-            {!state.user.uid && <p className="Error_text">Please log in !</p>}
-            {state.user.uid && <div>
+            {!correntUserId && <p className="Error_text">Please log in !</p>}
+            {correntUserId && <div>
                 <div className="Search_container">
                     <AsyncSearchBar setCollabs={setCollabs} />
                     {collabs.length !== 0 && <h3>Selected Users!</h3>}
@@ -71,6 +71,7 @@ const SearchList = () => {
                             userId={user.userId}
                             isFollows={user.isFollows}
                             firebaseId={user.id}
+                            isCurrentUser={user.isCurrentUser}
                         />
                     })}
                 </div>
