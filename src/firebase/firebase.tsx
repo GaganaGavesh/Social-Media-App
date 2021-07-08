@@ -55,34 +55,40 @@ console.log(ref);
 //     console.log('Exists', snapshotVal)
 
 
-//     console.log('User', fetchUser[0].follows)
-//     fetchUser[0].follows.forEach((followId: any)=>{
+    // console.log('User', fetchUser[0].follows)
+    // fetchUser[0].follows.forEach((followId: any)=>{
 
-//     })
+    // })
 
-//     //folower kenek add unamaa
-//     const path = `users/${fetchUser[0].id}/follows`;
-//     const followsArray = [...fetchUser[0].follows,'uQ6BdmkOFIOSNiOErkpebJJIkB22jsjsjsjjsjsjjjj', 'uQ6BdmkOFIOSNiOErkpebJJIkB22'];
-//     database.ref(path).update({
-//         ...followsArray
-//     }).then(()=> console.log('Updated Successfully !'))
-//     .catch((e: any)=>{
-//         console.log(e);
-//     });
-//     }
-//     else {
-//       const followsArray = ['uQ6BdmkOFIOSNiOErkpebJJIkB227575757'];
-//       const user = {
-//         userId: 'uQ6BdmkOFIOSNiOErkpebJJIkB227575757',
-//         displayName: 'gamage',
-//         userProfileImageUrl: 'gahsljljljjl',
-//         follows: followsArray
-//       }
-//       database.ref('users').push(user).then((ref: any) => {
-//         console.log('User added');
-//         });
-//     }
-//   });
+    //folower kenek add unamaa
+  //   const path = `users/${fetchUser[0].id}/follows`;
+  //   const followsArray = ['uQ6BdmkOFIOSNiOErkpebJJIkB22jsjsjsjjsjsjjjj','kdkdks'];
+  //   database.ref(path).remove().then(()=> {
+  //     console.log('Removed')
+  //     updateFollows(path,followsArray);
+  //   })
+  //   .catch((e: any)=>{
+  //       console.log(e);
+  //   });
+  //   }
+  //   else {
+  //     const followsArray = ['uQ6BdmkOFIOSNiOErkpebJJIkB227575757'];
+  //     const user = {
+  //       userId: 'uQ6BdmkOFIOSNiOErkpebJJIkB227575757',
+  //       displayName: 'gamage',
+  //       userProfileImageUrl: 'gahsljljljjl',
+  //       follows: followsArray
+  //     }
+  //     database.ref('users').push(user).then((ref: any) => {
+  //       console.log('User added');
+  //       });
+  //   }
+  // });
+  // const updateFollows = (path: string, followsArray: any)=>{
+  //   database.ref(path).update({
+  //     ...followsArray
+  //   }).then(()=> console.log('Updated'));
+  // };
 
 // ref.child("users").orderByChild("userId").limitToFirst(1).equalTo("uQ6BdmkOFIOSNiOErkpebJJIkB22").once("value").then((snapshot: any) => {
 //   const fetchedPosts01: any = [];
