@@ -9,7 +9,7 @@ const SearchList = () => {
     const [collabs, setCollabs] = useState([]);
     const [mappedCollabs, setMappedCollabs] = useState([]);
     const [currentUserFollowIds, SetCurrentUserFollowIds] = useState([]);
-    const correntUserId: string =  'AJv5bZn6aEeIL3SDutVeoBVrR8F3';
+    const correntUserId: string =  state.user.uid;
 
     // let isLoggedIn = false;
     // if (Object.keys(state.user).length == 0) {

@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 const SearchListItem = (props: any) => {
     const { state, dispatch } = useContext(PostContext);
     //const [followed, setFollowd] = useState(false)
-    const correntUserId: string =  'AJv5bZn6aEeIL3SDutVeoBVrR8F3';
+    const correntUserId: string =  state.user.uid;
     console.log("idFollows",props.isFollows);
 
     let followed: boolean = props.isFollows;
