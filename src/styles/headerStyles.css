@@ -1,0 +1,23 @@
+.App-header {
+    background-color: #282c34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  .header_title{
+    margin: 10px;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+
+  .nav-links {
+    margin: 20px;
+    color: aqua;
+  }
+
+  .login_logout_button{
+      margin-left: 10px;
+  }

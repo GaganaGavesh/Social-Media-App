@@ -1,0 +1,41 @@
+.Search_container{
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+    align-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+.User_container{
+    justify-content: center;
+    max-width: 400px;
+    margin: auto;
+    align-content: center;
+    border: wheat solid;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* padding: 2px; */
+    border-radius: 5px;
+  }
+
+.Selected_User_Data_Flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.PostItem_header_container_name_date{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Selected_User_profile_image{
+    width: 50px;
+    height: 50px;
+}
+
+.Follow_Button{
+    margin-top: 6px;
+}
+

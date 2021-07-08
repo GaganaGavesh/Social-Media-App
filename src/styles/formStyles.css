@@ -1,0 +1,23 @@
+.Post_form{
+    /* flex-direction: column; */
+    /* align-items: center;
+    justify-content: center; */
+    max-width: 800px;
+    margin: auto;
+    align-content: center;
+    padding-bottom: 50px;
+  }
+
+.Post_form_title{
+   color: royalblue;
+   padding: 5px 0px 10px 0px;
+}
+
+.Post_form_subtitles{
+    color: black;
+    font-weight: bold;
+}
+
+.Post_form_image{
+    width: 800px;
+}

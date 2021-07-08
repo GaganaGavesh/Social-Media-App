@@ -1,0 +1,12 @@
+.App {
+    text-align: center;
+  }
+
+body{
+    background:whitesmoke;
+  }
+
+.Error_text{
+    color: red;
+    font-style: italic;
+}
