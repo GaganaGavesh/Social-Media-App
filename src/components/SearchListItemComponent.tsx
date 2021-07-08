@@ -9,7 +9,7 @@ const SearchListItem = (props: any) => {
     const onFollowButtonClick = () => {
         //current user balanawaa
         //state.user.uid
-        refChildUsers.orderByChild("userId").limitToFirst(1).equalTo("AJv5bZn6aEeIL3SDutVeoBVrR8F3").once("value").then((snapshot: any) => {
+        refChildUsers.orderByChild("userId").limitToFirst(1).equalTo(state.user.uid).once("value").then((snapshot: any) => {
             const snapshotVal = snapshot.val();
             if (snapshot.exists()) {
                 const fetchUser: any = [];
@@ -45,7 +45,7 @@ const SearchListItem = (props: any) => {
     }
 
     const onUnFollowButtonClick = () => {
-        refChildUsers.orderByChild("userId").limitToFirst(1).equalTo("AJv5bZn6aEeIL3SDutVeoBVrR8F3").once("value").then((snapshot: any) => {
+        refChildUsers.orderByChild("userId").limitToFirst(1).equalTo(state.user.uid).once("value").then((snapshot: any) => {
             const snapshotVal = snapshot.val();
             if (snapshot.exists()) {
                 const fetchUser: any = [];
@@ -68,19 +68,11 @@ const SearchListItem = (props: any) => {
                 fetchUser[0].follows.forEach((followId: string) => {
                     followIdArray.push(followId);
                 });
+                
                 var unfollowedArray: any = followIdArray.filter((followId: string) => {
-                    return followId !== 'uQ6BdmkOFIOSNiOErkpebJJIkB22jsjsjsjjsjsjjjj';
+                    return followId !== props.userId;
                 });
 
-                // const followsArray = [ props.userId];
-                // database.ref(path).update({
-                //     ...followsArray
-                // }).then(() => {
-                //     console.log('Updated Successfully !');
-                //     setFollowd(true);
-                // }).catch((e: any) => {
-                //         console.log(e);
-                // });
                 console.log('unfollowedArray',unfollowedArray);
                 const UNFOLLOWED: any = [...unfollowedArray];
                 database.ref(path).update({
