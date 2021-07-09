@@ -1,10 +1,9 @@
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import AppRouter from '../routers/AppRouters';
-import AuthContext from '../context/auth-context';
 import PostContext from '../context/post-context'
 import postReducer from '../reducers/post-reducer';
 import { populatePosts } from '../actions/postActions'
-import database, { firebase, refChildUsers, refChildPosts } from '../firebase/firebase';
+import { firebase, refChildUsers, refChildPosts } from '../firebase/firebase';
 
 const SocialMediaApp = () => {
   const defaultUser = {} as any;
