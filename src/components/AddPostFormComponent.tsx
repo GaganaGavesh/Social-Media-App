@@ -107,7 +107,6 @@ const AddPostForm = (props: any) => {
                             onChange={(e) => setImageUrl(e.target.value)}
                         />
                     </div>
-
                     <button disabled={error ? true : false} className="btn btn-success">Add Post</button>
                 </form>
             </div>}
